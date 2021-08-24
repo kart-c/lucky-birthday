@@ -2,12 +2,14 @@ const dateOfBirth = document.querySelector('#dob');
 const numberInput = document.querySelector('#num');
 const checkBtn = document.querySelector('button');
 const outputText = document.querySelector('.output-text');
+const helperText = document.querySelector('.helper-text');
 
 checkBtn.addEventListener('click', function () {
 	const dobValue = dateOfBirth.value.replaceAll('-', '');
 	const numValue = parseInt(numberInput.value);
 	const dobSum = addDOB(dobValue);
 	if (numValue && dobSum) {
+		helperText.style.display = 'none';
 		if (dobSum % numValue === 0) {
 			outputText.innerHTML = 'Your birthday is lucky! &#129395;';
 		} else {
