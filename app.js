@@ -3,6 +3,13 @@ const numberInput = document.querySelector('#num');
 const checkBtn = document.querySelector('button');
 const outputText = document.querySelector('.output-text');
 const helperText = document.querySelector('.helper-text');
+const bodyMain = document.querySelector('main');
+const initialRender = document.querySelector('.initial-render');
+
+initialRender.addEventListener('click', function () {
+	initialRender.style.display = 'none';
+	bodyMain.style.display = 'block';
+});
 
 checkBtn.addEventListener('click', function () {
 	const dobValue = dateOfBirth.value.replaceAll('-', '');

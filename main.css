@@ -57,3 +57,20 @@ button:active {
 .helper-text {
 	font-size: 1.2rem;
 }
+
+.initial-render {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+.initial-render div {
+	width: 35rem;
+}
+
+main {
+	display: none;
+}
