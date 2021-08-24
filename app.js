@@ -1,6 +1,7 @@
 const dateOfBirth = document.querySelector('#dob');
 const numberInput = document.querySelector('#num');
 const checkBtn = document.querySelector('button');
+const outputText = document.querySelector('.output-text');
 
 checkBtn.addEventListener('click', function () {
 	const dobValue = dateOfBirth.value.replaceAll('-', '');
@@ -8,12 +9,12 @@ checkBtn.addEventListener('click', function () {
 	const dobSum = addDOB(dobValue);
 	if (numValue && dobSum) {
 		if (dobSum % numValue === 0) {
-			console.log('Your birthday is lucky!');
+			outputText.innerHTML = 'Your birthday is lucky! &#129395;';
 		} else {
-			console.log('Your birthday is not lucky');
+			outputText.innerHTML = 'Your birthday is not lucky &#129301;';
 		}
 	} else {
-		console.log('Enter both fields');
+		outputText.innerHTML = 'Enter both fields &#128544;';
 	}
 });
 
