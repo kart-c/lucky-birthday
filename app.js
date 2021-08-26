@@ -5,10 +5,12 @@ const outputText = document.querySelector('.output-text');
 const helperText = document.querySelector('.helper-text');
 const bodyMain = document.querySelector('main');
 const initialRender = document.querySelector('.initial-render');
+const footer = document.querySelector('footer');
 
 initialRender.addEventListener('click', function () {
 	initialRender.style.display = 'none';
 	bodyMain.style.display = 'block';
+	footer.style.display = 'block';
 });
 
 checkBtn.addEventListener('click', function () {
